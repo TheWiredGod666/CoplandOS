@@ -1,0 +1,152 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["custom/shutdown","hyprland/window","custom/files","custom/edit" ,"custom/write","custom/render","tray",],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["memory","cpu","network","battery","pulseaudio","clock",],
+    
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "default": ""
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+"mpris": {
+		"format":"{player_icon} {title}",
+		"format-paused": "{status_icon} {title}",
+		"tooltip":false,
+		"status-icons": {
+			"paused": "",
+			"playing":"󰏤",
+		},
+		"player-icons": {
+			"default":"󰏤",
+			"spotify": "󰓇  ",
+		},
+		"max-length":16,
+		"tooltip-format": "{status_icon} {title} - {artist} - {player}",
+	},
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%a %d %H:%M}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'>{}</span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    
+    "hyprland/window": {
+	    "format": "{class}",
+	    "rewrite": {
+	        "kitty": "Terminal",
+	        "floatterm": "Terminal",
+	       	"firefox": "Firefox",
+            "discord":"Discord",
+            "steam":"Steam",
+            "obsidian":"Obsidian",
+            "gimp":"Gimp",
+            "librewolf":"LibreWolf",
+	       	"teams-for-linux":"Microsoft Teams",
+	       	"org.kde.okular": "Okular",
+	       	"org.kde.gwenview": "Photos",
+	       	"spotify":"Spotify",
+	       	"pavucontrol-qt":"Audio Panel",
+	       	"fusion360.exe":"Fusion 360",
+	       	"kdesystemsettings": "Preferences",
+	       	"nemo": "Finder",
+	       	"org.fooyin.fooyin": "Fooyin",
+	       	"org.kde.knights":"Knights",
+	       	"com.github.flxzt.rnote":"RNote",
+	       	"com.missioncenter.MissionCenter":"Task Manager",
+	       	"org.kde.iconexplorer":"Icons",
+	       	"":"Finder",
+	        "(.*) - fish": "> [$1]"
+	    }
+    },
+
+    "custom/files":{
+            "format":"File",
+            "on-click": "nemo",
+    },
+    "custom/edit":{
+            "format":"Edit",
+            "on-click": "gimp",
+    },
+    "custom/write":{
+            "format":"Write",
+            "on-click": "obsidian",
+    },
+    "custom/shutdown":{
+            "format":"",
+    },
+
+
+
+
+    "pulseaudio": {
+        "format":"{icon}{volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": " ",
+        "format-icons": {
+            "default": [" ", " ", "  ",]
+        },
+        "on-click": "pavucontrol",
+    },
+
+    "network": {
+        "format-wifi":" {essid}",
+        "format-ethernet":"󰍹{essid}",
+        "format-disconnected": "Disconnected",
+        "tooltip-format": "IP: {ipaddr}\nCIDR: {cidr}\nGateway: {gwaddr}",
+        "tooltip-format-wifi": "Essid: {essid}\nFreq: {frequency}MHz\nSignal: {signalStrength}%",
+        "on-click": "nm-connection-editor"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "  {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+        },
+    "cpu": { 
+  "interval": 10, 
+  "format": "Cpu:{usage}%" 
+        },
+
+    "memory": { 
+        "interval": 30, 
+        "format": "Ram:{percentage}%" 
+        }
+    }
+}

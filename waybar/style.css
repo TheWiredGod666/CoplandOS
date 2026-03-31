@@ -1,0 +1,143 @@
+* {
+  /* General taskbar font, I like maple mono ^-^*/
+  font-family: "JetBrainsMono Nerd Font", "FontAwesome", "Material Design Icons", sans-serif;
+  border-radius: 0;
+  font-size: 14px;
+  padding: 0px;
+  background: transparent;
+}
+
+window#waybar {
+    /* rgba(Red, Green, Blue, Opacity) */
+    /* Opacity: 0.0 is invisible, 1.0 is solid, 0.5 is 50% */
+    background-color: rgba(0, 0, 10, 1)
+}
+
+
+#battery,
+#network,
+#clock,
+#tray,
+#workspaces,
+#window,
+#mpris,
+#cpu,
+#memory,
+#custom-files,
+#custom-edit,
+#custom-write,
+#custom-shutdown,
+#pulseaudio {
+  background-image: linear-gradient(to bottom, #00000a 100%);
+
+  margin: 4px;
+  margin-right: 0px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #FFFFFF;
+
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, #ac82e9 100%);
+  color: #141216;
+  transition-duration: 120ms;
+}
+
+#clock {
+  margin-right: 6px;
+}
+
+
+#tray menu {
+  background-color: #141216;
+  color: #d8cab8;
+  padding: 4px;
+}
+#tray menu menuitem {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+
+  margin: 3px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #27232b;
+}
+#tray menu menuitem:hover {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+  color: #ac82e9;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #8f56e1;
+}
+#workspaces button.focused {
+  color: #ac82e9;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: #ac82e9;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: #fcb167;
+}
+
+#battery {
+  background-color: #222222;
+  color: #d8cab8;
+}
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  color: #1d2021;
+  background-color: #fc4649;
+}
+
+#window{
+    font-weight:bold;
+}
+
+#custom-files {
+    /*font-weight: bold;*/
+    transition-duration: 120ms;
+}
+#custom-files:hover {
+  background-image: linear-gradient(to bottom, #ac82e9 100%);
+  color: #141216;
+  transition-duration: 120ms;
+}
+
+#custom-edit {
+    /*font-weight: bold;*/
+    transition-duration: 120ms;
+}
+#custom-edit:hover {
+  background-image: linear-gradient(to bottom, #ac82e9 100%);
+  color: #141216;
+  transition-duration: 120ms;
+}
+#custom-write {
+    /*font-weight: bold;*/
+    transition-duration: 120ms;
+}
+#custom-write:hover {
+  background-image: linear-gradient(to bottom, #ac82e9 100%);
+  color: #141216;
+  transition-duration: 120ms;
+}
+
