@@ -1,6 +1,6 @@
 * {
   /* General taskbar font, I like maple mono ^-^*/
-  font-family: "JetBrainsMono Nerd Font", "FontAwesome", "Material Design Icons", sans-serif;
+  font-family: "Inter Nerd Font", sans-serif;
   border-radius: 0;
   font-size: 14px;
   padding: 0px;
@@ -28,8 +28,6 @@ window#waybar {
 #custom-write,
 #custom-shutdown,
 #pulseaudio {
-  background-image: linear-gradient(to bottom, #00000a 100%);
-
   margin: 4px;
   margin-right: 0px;
   padding: 4px 8px;
@@ -109,7 +107,7 @@ window#waybar {
 }
 
 #window{
-    font-weight:bold;
+    font-weight:600;
 }
 
 #custom-files {

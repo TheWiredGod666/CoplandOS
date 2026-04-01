@@ -1,2 +1,80 @@
+configuration {
+    modi: "drun";
+    show-icons: false;
+    icon-theme: "Papirus"; /* Ou WhiteSur-icon-theme se tiver instalado */
+    font: "Inter Nerd Font 14";
+    display-drun: " ";
+}
 
-@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+@theme "/dev/null"
+
+* {
+    bg: rgba(30, 30, 46, 1);
+    fg: #cdd6f4;
+    border-col: rgba(255, 255, 255, 0.1);
+    selected-bg: rgba(255, 255, 255, 0.15);
+    
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+}
+
+window {
+    width: 600px;
+    background-color: @bg;
+    border: 1px solid;
+    border-color: @border-col;
+    border-radius: 12px;
+    padding: 20px;
+    /* ... outras configs ... */
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    /* Adiciona uma borda sutil que ajuda a destacar o blur */
+}
+
+mainbox {
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 8px;
+    padding: 12px;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: #a6adc8;
+    padding: 0 10px 0 0;
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: #6c7086;
+}
+
+listview {
+    lines: 6;
+    margin: 20px 0 0 0;
+    scrollbar: false;
+}
+
+element {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @selected-bg;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 10px 0 0;
+}
+
